@@ -1,1 +1,1 @@
-# docker-lamp
+# LAMP environment based on Docker
