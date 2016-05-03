@@ -1,0 +1,9 @@
+##### MySQL
+MYSQL_ROOT_PASSWORD=root
+MYSQL_USER=
+MYSQL_PASSWORD=
+MYSQL_DATABASE=
+
+##### Apache
+
+##### PHP

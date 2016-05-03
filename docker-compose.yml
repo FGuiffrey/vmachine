@@ -1,0 +1,17 @@
+application:
+    image: debian:jessie
+    volumes:
+        - ~/vbox/www:/var/www
+        - ~/vbox/conf/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
+        - ~/vbox/conf/sites:/etc/apache2/sites-enabled
+    tty: true
+
+web:
+    restart: always
+    build: apache
+    ports:
+        - "80:80"
+    volumes_from:
+        - application
+    environment:
+        - ALLOW_OVERRIDE=true
