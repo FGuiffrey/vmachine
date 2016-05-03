@@ -27,7 +27,7 @@ RUN apt-get update && \
         nano \
         git \
         mysql-client \
-        ssh-client \
+        openssh-server \
         && \
     rm -rf /var/lib/apt/lists/* && \
     php5enmod mcrypt && \
@@ -49,6 +49,11 @@ RUN apt-get update && \
     wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
     dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
     rm wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+
+RUN apt-get autoremove && apt-get clean
+
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
 
 # Add image configuration and scripts
 ADD apache.sh /apache.sh
