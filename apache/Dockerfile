@@ -59,7 +59,7 @@ RUN mv composer.phar /usr/local/bin/composer
 ADD apache.sh /apache.sh
 RUN chmod 755 /*.sh
 
-ADD bash_aliases.dist /root/.bash_aliases
+ADD bash_aliases /root/.bash_aliases
 ENV TERM xterm
 
 EXPOSE 80
