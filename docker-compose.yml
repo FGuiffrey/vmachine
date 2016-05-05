@@ -13,5 +13,13 @@ web:
         - "80:80"
     volumes_from:
         - application
-    environment:
-        - ALLOW_OVERRIDE=true
+    env_file: docker-env
+    links:
+        - mysql
+
+mysql:
+    image: mariadb:latest
+    env_file: docker-env
+    ports:
+        - "3306:3306"
+    tty: true
