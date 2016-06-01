@@ -19,14 +19,24 @@ if [[ ! -z "${2}" ]]; then
     DOCKER="${2}"
 fi
 
+if [[ $1 = "stop" ]]; then
+echo "$ROUGE"'stopping '"${DOCKER}"' environment...' "$NORMAL"
+cd /Users/mco/"${DOCKER}"
+echo "$CYAN"'---- eval "$(docker-machine env '"${DOCKER}"')" ----'"$NORMAL"
+eval "$(docker-machine env "${DOCKER}")"
+echo "$CYAN"'---- docker-compose stop ----'"$NORMAL"
+docker-compose stop
+echo "$CYAN"'---- docker-machine stop '"${DOCKER}"' ----'"$NORMAL"
+docker-machine stop "${DOCKER}"
+echo "$VERT""${DOCKER}" 'environment is stopped.'
+else
 echo "$BLEU"'Starting '"${DOCKER}"' environment...' "$NORMAL"
 cd ~/"${DOCKER}"
 echo "$CYAN"'---- docker-machine '"${BEHAVIOR}"' '"${DOCKER}"' ----'"$NORMAL"
 docker-machine "${BEHAVIOR}" "${DOCKER}"
-echo "$CYAN"'---- docker-machine env '"${DOCKER}"' ----'"$NORMAL"
-docker-machine env "${DOCKER}"
 echo "$CYAN"'---- eval "$(docker-machine env '"${DOCKER}"')" ----'"$NORMAL"
 eval "$(docker-machine env "${DOCKER}")"
 echo "$CYAN"'---- docker-compose '"${BEHAVIOR}"' ----'"$NORMAL"
 docker-compose "${BEHAVIOR}"
 echo "$VERT""${DOCKER}" 'environment is started.'
+fi

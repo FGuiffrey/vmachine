@@ -6,6 +6,8 @@ function connectdocker {
 alias sf='php app/console'
 alias schema-dump='php app/console doctrine:schema:update --dump-sql'
 alias schema-force='php app/console doctrine:schema:update --force'
+alias assets-install='php app/console assets:install --symlink'
+alias assetic-dump='php app/console assetic:dump'
 
 # COLORS
 export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33'
