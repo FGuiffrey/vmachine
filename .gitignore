@@ -2,3 +2,4 @@
 .DS_Store
 docker-env
 apache/bash_aliases
+docker-compose.yml

@@ -35,6 +35,13 @@ $ git clone https://github.com/mcoemakinafr/docker-lamp.git
 ```
 Or you can download the ZIP archive [here](https://github.com/mcoemakinafr/docker-lamp/archive/master.zip)
 
+### Get your own compose file
+```
+$ cp docker-compose.yml.dist docker-compose.yml
+$ nano docker-compose.yml
+```
+_You can have the match between your virtual hosts `~/vbox/conf/sites` and your hosts file._
+
 ### Define your variables environment
 ```
 $ cp docker-env.dist docker-env
