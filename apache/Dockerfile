@@ -24,6 +24,7 @@ RUN apt-get update && \
         php5-mcrypt \
         php-apc \
         php5-imagick \
+        php5-xdebug \
         nano \
         git \
         mysql-client \

@@ -1,18 +1,11 @@
-application:
-    image: debian:jessie
-    env_file: docker-env
-    volumes:
-        - ~/vbox/www:/var/www
-        - ~/vbox/conf/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
-        - ~/vbox/conf/sites:/etc/apache2/sites-enabled
-    tty: true
-
 web:
     build: apache
     ports:
         - "80:80"
-    volumes_from:
-        - application
+    volumes:
+        - ~/vbox/www:/var/www
+        - ~/vbox/conf/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
+        - ~/vbox/conf/sites:/etc/apache2/sites-enabled
     env_file: docker-env
     links:
         - mysql
