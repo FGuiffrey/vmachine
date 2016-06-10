@@ -19,3 +19,11 @@ mysql:
     ports:
         - "3306:3306"
     tty: true
+
+phpmyadmin:
+    image: corbinu/docker-phpmyadmin
+    links:
+      - mysql
+    ports:
+      - "8181:80"
+    env_file: docker-env

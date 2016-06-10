@@ -29,6 +29,9 @@ RUN apt-get update && \
         git \
         mysql-client \
         openssh-server \
+        jpegoptim \
+        nodejs \
+        uglifyjs \
         && \
     rm -rf /var/lib/apt/lists/* && \
     php5enmod mcrypt && \
