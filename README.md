@@ -10,9 +10,9 @@ These are the configured containers :
 ```
             Name                         Command              State           Ports          
 --------------------------------------------------------------------------------------------
-virtualmachine_application_1   /bin/bash                      Up                             
-virtualmachine_mysql_1         /docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp 
-virtualmachine_web_1           /apache.sh                     Up      0.0.0.0:80->80/tcp   
+vmachine_application_1   /bin/bash                      Up                             
+vmachine_mysql_1         /docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp 
+vmachine_web_1           /apache.sh                     Up      0.0.0.0:80->80/tcp   
 ```
 
 ## Installation
@@ -64,8 +64,8 @@ The default preferences are :
 
 ### Create the virtual machine
 ```
-$ docker-machine create --driver=virtualbox virtualmachine
-$ eval "$(docker-machine env virtualmachine)"
+$ docker-machine create --driver=virtualbox vmachine
+$ eval "$(docker-machine env vmachine)"
 ```
 
 ### Build the environment
@@ -79,10 +79,10 @@ $ docker-compose up -d
 + You can add virtual hosts as much as you want by placing your configuration in `~/vbox/conf/sites`. You just must run these commands :
     - `$ docker-compose build --no-cache`
     - `$ docker-compose up -d`
-+ `docker.sh` is bash script to make start/restart easier. You'll just have to extract it from this folder and update the path to your docker configuration folder. It works as following :
-    - `$ ./docker.sh start (or restart) virtualmachine`
++ `launch.sh` is bash script to make start/restart easier. You'll just have to extract it from this folder and update the path to your docker configuration folder. It works as following :
+    - `$ ./launch.sh start (or restart) vmachine`
 + `bash_aliases` also contains an alias to make the connection to a docker container easier : `$ godocker`. For example, to connect to the PHP-FPM container : just run
-`$ godocker virtualmachine_web_1`
+`$ godocker vmachine_web_1`
 
 
 

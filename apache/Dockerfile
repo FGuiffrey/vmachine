@@ -16,6 +16,7 @@ RUN apt-get update && \
         curl \
         wget \
         apache2 \
+        memcached \
         libapache2-mod-php5 \
         php5-mysql \
         php5-gd \
@@ -25,6 +26,7 @@ RUN apt-get update && \
         php-apc \
         php5-imagick \
         php5-xdebug \
+        php5-memcached \
         nano \
         git \
         mysql-client \

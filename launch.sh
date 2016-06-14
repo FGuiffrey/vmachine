@@ -14,14 +14,14 @@ if [[ ! -z "${1}" ]]; then
     BEHAVIOR="${1}"
 fi
 
-DOCKER="virtualmachine"
+DOCKER="vmachine"
 if [[ ! -z "${2}" ]]; then
     DOCKER="${2}"
 fi
 
 if [[ $1 = "stop" ]]; then
 echo "$ROUGE"'stopping '"${DOCKER}"' environment...' "$NORMAL"
-cd /Users/mco/"${DOCKER}"
+cd ~/"${DOCKER}"
 echo "$CYAN"'---- eval "$(docker-machine env '"${DOCKER}"')" ----'"$NORMAL"
 eval "$(docker-machine env "${DOCKER}")"
 echo "$CYAN"'---- docker-compose stop ----'"$NORMAL"
