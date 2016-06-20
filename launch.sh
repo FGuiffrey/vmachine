@@ -38,5 +38,5 @@ echo "$CYAN"'---- eval "$(docker-machine env '"${DOCKER}"')" ----'"$NORMAL"
 eval "$(docker-machine env "${DOCKER}")"
 echo "$CYAN"'---- docker-compose '"${BEHAVIOR}"' ----'"$NORMAL"
 docker-compose "${BEHAVIOR}"
-echo "$VERT""${DOCKER}" 'environment is '"${BEHAVIOR}"'.'
+echo "$VERT""${DOCKER}" 'environment is '"${BEHAVIOR}"'ed.'
 fi

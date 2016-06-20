@@ -47,7 +47,7 @@ _You can have the match between your virtual hosts `~/vbox/conf/sites` and your 
 $ cp docker-env.dist docker-env
 $ nano docker-env
 ```
-_The only mandatory environment variable is: **MYSQL_ROOT_PASSWORD**._
+_The mandatory environment variables to change are : **MYSQL_ROOT_PASSWORD**, **MYSQL_USER** and **MYSQL_PASSWORD**._
 
 
 ### Define your aliases preferences

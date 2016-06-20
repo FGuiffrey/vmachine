@@ -7,4 +7,6 @@ MYSQL_DATABASE=
 ##### Apache
 ALLOW_OVERRIDE=true
 
-##### PHP
+##### PHPMYADMIN (Max upload à 1Go et session expire après 24 heures)
+UPLOAD_SIZE=1G
+SESSION_TIMEOUT=86400
