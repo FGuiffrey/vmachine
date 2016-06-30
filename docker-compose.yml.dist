@@ -2,10 +2,13 @@ web:
     build: apache
     ports:
         - "80:80"
+        - "11211:11211"
     volumes:
         - ~/vbox/www:/var/www
         - ~/vbox/conf/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
         - ~/vbox/conf/sites:/etc/apache2/sites-enabled
+        - ~/vbox/tmp:/usr/tmp
+        - ~/vbox/logs:/var/log/apache2
     env_file: docker-env
     links:
         - mysql
