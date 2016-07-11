@@ -23,6 +23,8 @@ By default, the configuration is as below :
 - ~/vbox/www >> contains your PHP code
 - ~/vbox/conf/php.ini >> contains your PHP configuration
 - ~/vbox/conf/sites >> contains your vhosts configuration
+- ~/vbox/tmp >> can contain your temporary files
+- ~/vbox/logs >> can contain your logs files
 ```
 
 ### Clone the repository
