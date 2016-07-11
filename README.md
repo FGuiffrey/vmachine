@@ -58,6 +58,11 @@ $ cp bash_aliases.dist bash_aliases
 $ nano bash_aliases
 ```
 
+### Copy the basic configuration in the right folder
+```
+$ cp ~/vmachine/vmachine.conf ~/vbox/conf/sites
+```
+
 The default preferences are :
 + aliases for `symfony2`
 + friendlier prompt

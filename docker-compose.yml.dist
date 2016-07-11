@@ -14,7 +14,7 @@ web:
         - mysql
     extra_hosts:
         # match with your conf in ~/vbox/conf/sites
-        - "somehost:127.0.0.1"
+        - "vmachine.dev:127.0.0.1"
 
 mysql:
     image: mariadb:latest
