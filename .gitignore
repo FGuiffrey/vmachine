@@ -1,5 +1,5 @@
 .idea/
 .DS_Store
-docker-env
+docker-envi
 apache/bash_aliases
 docker-compose.yml
