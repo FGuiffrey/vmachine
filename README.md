@@ -87,7 +87,7 @@ $ docker-compose up -d
     - `$ docker-compose build --no-cache`
     - `$ docker-compose up -d`
 + `launch.sh` is bash script to make start/restart easier. You'll just have to extract it from this folder and update the path to your docker configuration folder. It works as following :
-    - `$ ./launch.sh start (or restart) vmachine`
+    - `$ ./launch.sh start (or restart or stop) vmachine`
 + `bash_aliases` also contains an alias to make the connection to a docker container easier : `$ godocker`. For example, to connect to the PHP-FPM container : just run
 `$ godocker vmachine_web_1`
 
