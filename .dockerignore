@@ -1,7 +1,9 @@
 .git/
 .gitignore
-docker-env.dist
-docker-compose.yml.dist
 LICENSE
 README.md
-docker.sh
+*.sh
+*.dist
+apache/bash_aliases
+*.ini
+*.conf

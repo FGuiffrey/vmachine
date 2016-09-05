@@ -17,6 +17,6 @@ alias ll='ls -alGFh --color=always'
 
 # USEFULL
 alias godocker='connectdocker $1'
-alias connect-mysql='mysql -uroot -p  -h 192.168.99.101'
+alias exportmysqldump='mysqldump -uroot -proot -hmysql $1 > /var/www/dumps/$1.sql'
 
 cd /var/www

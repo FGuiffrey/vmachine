@@ -9,10 +9,10 @@ These are the configured containers :
 
 ```
             Name                         Command              State           Ports          
---------------------------------------------------------------------------------------------
-vmachine_application_1   /bin/bash                      Up                             
-vmachine_mysql_1         /docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp 
-vmachine_web_1           /apache.sh                     Up      0.0.0.0:80->80/tcp   
+--------------------------------------------------------------------------------------------                             
+vmachine_mysql_1         /docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp
+vmachine_phpmyadmin_1    /bin/sh -c phpmyadmin-start    Up      0.0.0.0:8181->80/tcp 
+vmachine_web_1           /apache.sh                     Up      0.0.0.0:11211->11211/tcp, 0.0.0.0:80->80/tcp   
 ```
 
 ## Installation
