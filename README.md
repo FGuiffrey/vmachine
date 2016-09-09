@@ -78,18 +78,22 @@ $ eval "$(docker-machine env vmachine)"
 ### Build the environment
 ```
 $ cd ~/folder-to-docker-configuration
-$ docker-compose build
 $ docker-compose up -d
 ```
 
 ### Here is some tips :
-+ You can add virtual hosts as much as you want by placing your configuration in `~/vbox/conf/sites`. You just must run these commands :
-    - `$ docker-compose build --no-cache`
-    - `$ docker-compose up -d`
-+ `launch.sh` is bash script to make start/restart easier. You'll just have to extract it from this folder and update the path to your docker configuration folder. It works as following :
-    - `$ ./launch.sh start (or restart or stop) vmachine`
-+ `bash_aliases` also contains an alias to make the connection to a docker container easier : `$ godocker`. For example, to connect to the PHP-FPM container : just run
-`$ godocker vmachine_web_1`
++ `launch.sh` is bash script to make start/restart/stop easier. You'll just have to extract it from this folder and update the path to your docker configuration folder. It works as following :
+    - `$ ./launch.sh start vmachine`
+        - `start|restart|stop` : action to do (restart by default) 
+        - `vmachine` : name of virtual machine (vmachine by default)
++ `bash_aliases` also contains an alias to make the connection to a docker container easier : `$ godocker`. You just have to report this alias in your own `~/.bash_profile`. So, to connect to your docker `vmachine_web_1` container from anywhere, just run `godocker` command
++ You can add virtual hosts as much as you want
+    - create the `.conf` file in `~/vbox/conf/sites`
+    - add `yourvhost:127.0.0.1` in `docker-compose.yml` with the other `web.extra_hosts`
+    - add `192.168.99.100 yourhost` to `/etc/hosts`
+    - run `$ ./launch.sh` 
+
+> The package already include a virtual host : `vmachine.dev`. It aims the root folder `~/vbox/www` that will contain all your projects. Just remember to place it in your `~/vbox/conf/sites` folder. The connection is made by `vmachine.dev:127.0.0.1` in `docker-compose.yml`
 
 
 
