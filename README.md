@@ -3,9 +3,9 @@ This repository provides a simple local environment for web development.
 
 ## Architecture
 These are the configured containers :
-+ `application` aka the application code container, based on ubuntu
 + `web` aka the Apache/PHP-FPM (5.6) container, where the application volume is mounted
 + `mysql` aka the MySQL server container
++ `phpmyadmin` aka the phpmyadmin container
 
 ```
             Name                         Command              State           Ports          
