@@ -33,6 +33,7 @@ RUN apt-get update && \
         openssh-server \
         jpegoptim \
         nodejs \
+        npm \
         uglifyjs \
         && \
     rm -rf /var/lib/apt/lists/* && \
