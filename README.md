@@ -77,7 +77,7 @@ $ eval "$(docker-machine env vmachine)"
 
 ### Build the environment
 ```
-$ cd ~/folder-to-docker-configuration
+$ cd ~/vmachine
 $ docker-compose up -d
 ```
 
