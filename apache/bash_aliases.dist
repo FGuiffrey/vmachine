@@ -1,6 +1,13 @@
 function connectdocker {
- docker exec -it $1 /bin/bash;
+ eval "$(docker-machine env vmachine)";
+ docker exec -it vmachine_web_1 /bin/bash;
 }
+
+function importsql {
+mysql -uroot -proot -hmysql $1 < $2
+rm $2
+}
+
 
 # SYMFONY
 alias sf='php app/console'
@@ -17,6 +24,8 @@ alias ll='ls -alGFh --color=always'
 
 # USEFULL
 alias godocker='connectdocker $1'
+alias connect-mysql='mysql -uroot -proot -hmysql'
+alias importmysql='importsql $1 $2'
 alias exportmysqldump='mysqldump -uroot -proot -hmysql $1 > /var/www/dumps/$1.sql'
 
 cd /var/www
