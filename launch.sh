@@ -9,7 +9,7 @@ BLANCLAIR="\\033[1;08m"
 JAUNE="\\033[1;33m"
 CYAN="\\033[1;36m"
 
-BEHAVIOR="restart"
+BEHAVIOR="start"
 if [[ ! -z "${1}" ]]; then
     BEHAVIOR="${1}"
 fi
