@@ -29,13 +29,13 @@ By default, the configuration is as below :
 
 ### Clone the repository
 ```
-$ git clone git@github.com:mcoemakinafr/docker-lamp.git
+$ git clone git@github.com:mcoemakinafr/vmachine.git
 ```
 If you prefer http clone :
 ```
-$ git clone https://github.com/mcoemakinafr/docker-lamp.git
+$ git clone https://github.com/mcoemakinafr/vmachine.git
 ```
-Or you can download the ZIP archive [here](https://github.com/mcoemakinafr/docker-lamp/archive/master.zip)
+Or you can download the ZIP archive [here](https://github.com/mcoemakinafr/vmachine/archive/master.zip)
 
 ### Get your own compose file
 ```
